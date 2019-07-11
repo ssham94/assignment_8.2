@@ -192,3 +192,82 @@ year2 = [100, 29, 58, 47, 12, 39, 28]
 print(sum_expenses(year1))
 print(sum_expenses(year2))
 
+####################################
+# Exercise 9
+
+# 9.1
+grocery_list = ["carrots", "toilet paper", "apples", "salmon"]
+for grocery in grocery_list:
+    print(f"* {grocery}")
+
+# 9.1 continued
+def print_groceries(list_of_groceries):
+    for grocery in list_of_groceries:
+        print(f"* {grocery}")
+    return 0
+
+grocery_list.append("rice")
+print_groceries(grocery_list)
+
+#9.2
+print(len(grocery_list))
+
+#9.3
+if grocery_list.count("bananas") > 0:
+    print("You don't need to pick up bananas today")
+else:
+    print("You need to pick up bananas")
+
+# 9.4
+print(grocery_list[1])
+
+#9.5
+sorted_grocery_list = sorted(grocery_list)
+for grocery in sorted_grocery_list:
+    print(f"* {grocery}")
+
+#9.6
+sorted_grocery_list.remove("salmon")
+print(sorted_grocery_list)
+
+
+###################################
+# Exercise 10
+
+# 10.1
+students = {
+  'cohort1': 34,
+  'cohort2': 42,
+  'cohort3': 22
+}
+
+# 10.2
+def print_cohorts(cohort_dict):
+    for cohort, num_students in cohort_dict.items():
+        print(f"{cohort}: {num_students} students")
+    print("")
+    return 0
+
+print_cohorts(students)
+
+# 10.3
+students["cohort4"] = 43
+print_cohorts(students) # Checking tos ee it is added correctly
+print("") # makes reading it in terminal easier
+
+# 10.4
+print(students.keys())
+
+# 10.5
+students = {cohort: num * 1.05 for cohort, num in students.items()}
+print_cohorts(students)
+
+# 10.6
+del students["cohort2"]
+print_cohorts(students)
+
+# 10.7
+total_students = 0
+for num in students.values():
+    total_students += num
+print(total_students)
