@@ -271,3 +271,34 @@ total_students = 0
 for num in students.values():
     total_students += num
 print(total_students)
+
+###################################
+# Exercise 11
+print("") # Making it easier to seperate the exercises in terminal
+
+for i in range(1,101):
+    if i % 3 == 0 and i % 5 == 0:
+        print("bitmaker")
+    elif i % 3 == 0:
+        print("bit")
+    elif i % 5 == 0:
+        print("maker")
+    else:
+        print(i)
+
+
+###################################
+# Exercise 12
+print("") # Making it easier to seperate the exercises in terminal
+
+def make_pizzas():
+    counter = 0
+    print("How many pizzas do you want to order?")
+    quantity = int(input())
+    while counter < quantity:
+        print(f"How many toppings for pizza {counter + 1}")
+        toppings = int(input())
+        print(f"You have ordered a pizza with {toppings} toppings.")
+        counter += 1
+    return 0
+make_pizzas()
