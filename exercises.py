@@ -163,9 +163,8 @@ print(total)
 # 7.4
 triple_fifty = []
 for i in range(50):
-    triple_fifty.append(i+1)
-    triple_fifty.append(i+1)
-    triple_fifty.append(i+1)
+    for x in range(0, 3):
+        triple_fifty.append(i+1)
 print(triple_fifty)
 
 # 7.5
